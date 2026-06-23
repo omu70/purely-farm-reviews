@@ -12,10 +12,10 @@
 #  selecting your existing app, then re-edit the URLs below.)
 # =============================================================
 
-client_id = "REPLACE_WITH_YOUR_CLIENT_ID"
+client_id = "f4ec90b678d46e8ffb3e586037c4f101"
 name = "Reviews"
 handle = "reviews-app"
-application_url = "https://<YOUR-APP>.vercel.app"
+application_url = "https://review-lovely-lady.vercel.app"
 embedded = true
 
 [access_scopes]
@@ -24,9 +24,9 @@ scopes = "write_products,read_products"
 
 [auth]
 redirect_urls = [
-  "https://<YOUR-APP>.vercel.app/auth/callback",
-  "https://<YOUR-APP>.vercel.app/auth/shopify/callback",
-  "https://<YOUR-APP>.vercel.app/api/auth/callback"
+  "https://review-lovely-lady.vercel.app/auth/callback",
+  "https://review-lovely-lady.vercel.app/auth/shopify/callback",
+  "https://review-lovely-lady.vercel.app/api/auth/callback"
 ]
 
 [webhooks]
@@ -41,9 +41,9 @@ api_version = "2024-10"
   uri = "/webhooks/app/scopes_update"
 
   [webhooks.privacy_compliance]
-  customer_data_request_url = "https://<YOUR-APP>.vercel.app/webhooks/customers/data_request"
-  customer_deletion_url     = "https://<YOUR-APP>.vercel.app/webhooks/customers/redact"
-  shop_deletion_url         = "https://<YOUR-APP>.vercel.app/webhooks/shop/redact"
+  customer_data_request_url = "https://review-lovely-lady.vercel.app/webhooks/customers/data_request"
+  customer_deletion_url     = "https://review-lovely-lady.vercel.app/webhooks/customers/redact"
+  shop_deletion_url         = "https://review-lovely-lady.vercel.app/webhooks/shop/redact"
 
 [pos]
 embedded = false
