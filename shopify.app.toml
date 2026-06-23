@@ -1,0 +1,52 @@
+# =============================================================
+# Shopify app configuration.
+# File: /shopify.app.toml
+#
+# BEFORE you deploy, replace the 3 placeholders below:
+#   1) client_id        → Partner Dashboard → your app → "Client ID"
+#   2) <YOUR-APP>        → your Vercel production domain (appears 4×)
+#   3) (scopes are already set for this app)
+#
+# Then run:  shopify app deploy
+# (Tip: `shopify app config link` can fill client_id for you by
+#  selecting your existing app, then re-edit the URLs below.)
+# =============================================================
+
+client_id = "REPLACE_WITH_YOUR_CLIENT_ID"
+name = "Reviews"
+handle = "reviews-app"
+application_url = "https://<YOUR-APP>.vercel.app"
+embedded = true
+
+[access_scopes]
+# Needed because the "Generate" page reads your product catalog.
+scopes = "write_products,read_products"
+
+[auth]
+redirect_urls = [
+  "https://<YOUR-APP>.vercel.app/auth/callback",
+  "https://<YOUR-APP>.vercel.app/auth/shopify/callback",
+  "https://<YOUR-APP>.vercel.app/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+  [webhooks.privacy_compliance]
+  customer_data_request_url = "https://<YOUR-APP>.vercel.app/webhooks/customers/data_request"
+  customer_deletion_url     = "https://<YOUR-APP>.vercel.app/webhooks/customers/redact"
+  shop_deletion_url         = "https://<YOUR-APP>.vercel.app/webhooks/shop/redact"
+
+[pos]
+embedded = false
+
+[build]
+include_config_on_deploy = true

@@ -1,0 +1,36 @@
+node_modules
+
+/build
+/public/build
+/.cache
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.log
+npm-debug.log*
+
+# Shopify / Vercel
+.shopify
+.vercel
+dist
+
+# -------------------------------------------------------------
+# Unrelated marketing assets & other projects' files living in this
+# folder — kept OUT of the repo so it stays clean and client briefs
+# stay private. Delete these lines if you actually want them committed.
+# -------------------------------------------------------------
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.docx
+historylifestyle_assets/
+dizigroww_*.md
+HistoryLifestyle_*.md
+HistoryLifestyle_*.docx
+history_lifestyle_*.html
+dizigroww_ph_landing.html
+evolabs-integrations-handoff-*.md

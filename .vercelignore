@@ -1,0 +1,24 @@
+# Files excluded from the Vercel deployment.
+# (Vercel auto-builds anything in /api as a serverless function, and we
+#  do NOT want the deprecated adapter built — the @vercel/remix preset
+#  handles everything. We also keep marketing assets out of the deploy.)
+
+# Deprecated build files
+api/
+remix.config.js
+
+# Theme App Extension — deployed to Shopify via `shopify app deploy`, not Vercel
+extensions/
+
+# Database SQL — run manually in Supabase, not needed at runtime
+supabase/
+
+# Marketing assets, briefs & docs (kept in the repo, not used by the app)
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.docx
+*.md
+historylifestyle_assets/
