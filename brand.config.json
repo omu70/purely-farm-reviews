@@ -1,0 +1,25 @@
+{
+  "_README": "Single source of truth for one store's deploy. Edit this, then run `node scripts/configure-brand.mjs`. Secrets do NOT go here — they go in .env (gitignored).",
+
+  "brand": {
+    "name": "Purely Farm",
+    "appName": "Purely Farm Reviews",
+    "appHandle": "purely-farm-reviews",
+    "supportEmail": "evolabs13@gmail.com"
+  },
+
+  "deploy": {
+    "vercelDomain": "purely-farm-reviews.vercel.app",
+    "shopifyClientId": "060f6444b061b926d183f49cdeb1edb8",
+    "scopes": "read_products"
+  },
+
+  "store": {
+    "myshopifyDomain": "purely-farm.myshopify.com"
+  },
+
+  "reviewsLocale": {
+    "preset": "india",
+    "_options": "india | global"
+  }
+}

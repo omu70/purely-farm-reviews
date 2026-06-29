@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
+    "setup:brand": "node scripts/configure-brand.mjs",
+    "setup:check": "node scripts/configure-brand.mjs --check",
     "dev": "shopify app dev",
     "config:link": "shopify app config link",
     "config:use": "shopify app config use",

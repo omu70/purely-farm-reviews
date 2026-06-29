@@ -12,21 +12,21 @@
 #  selecting your existing app, then re-edit the URLs below.)
 # =============================================================
 
-client_id = "f4ec90b678d46e8ffb3e586037c4f101"
-name = "Reviews"
-handle = "reviews-app"
-application_url = "https://review-lovely-lady.vercel.app"
+client_id = "060f6444b061b926d183f49cdeb1edb8"
+name = "Purely Farm Reviews"
+handle = "purely-farm-reviews"
+application_url = "https://purely-farm-reviews.vercel.app"
 embedded = true
 
 [access_scopes]
 # Needed because the "Generate" page reads your product catalog.
-scopes = "write_products,read_products"
+scopes = "read_products"
 
 [auth]
 redirect_urls = [
-  "https://review-lovely-lady.vercel.app/auth/callback",
-  "https://review-lovely-lady.vercel.app/auth/shopify/callback",
-  "https://review-lovely-lady.vercel.app/api/auth/callback"
+  "https://purely-farm-reviews.vercel.app/auth/callback",
+  "https://purely-farm-reviews.vercel.app/auth/shopify/callback",
+  "https://purely-farm-reviews.vercel.app/api/auth/callback"
 ]
 
 [webhooks]
@@ -41,12 +41,11 @@ api_version = "2024-10"
   uri = "/webhooks/app/scopes_update"
 
   [webhooks.privacy_compliance]
-  customer_data_request_url = "https://review-lovely-lady.vercel.app/webhooks/customers/data_request"
-  customer_deletion_url     = "https://review-lovely-lady.vercel.app/webhooks/customers/redact"
-  shop_deletion_url         = "https://review-lovely-lady.vercel.app/webhooks/shop/redact"
+  customer_data_request_url = "https://purely-farm-reviews.vercel.app/webhooks/customers/data_request"
+  customer_deletion_url     = "https://purely-farm-reviews.vercel.app/webhooks/customers/redact"
+  shop_deletion_url         = "https://purely-farm-reviews.vercel.app/webhooks/shop/redact"
 
 [pos]
 embedded = false
 
 [build]
-include_config_on_deploy = true

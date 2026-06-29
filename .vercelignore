@@ -13,6 +13,11 @@ extensions/
 # Database SQL — run manually in Supabase, not needed at runtime
 supabase/
 
+# Per-brand setup tooling (used at config time, not at runtime)
+scripts/
+brand.config.json
+.brand-applied.json
+
 # Marketing assets, briefs & docs (kept in the repo, not used by the app)
 *.png
 *.jpg
